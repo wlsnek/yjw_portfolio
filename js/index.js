@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
         loadingScreen.style.display = "none";
         mainContent.style.display = "block";
-    }, 3000);
+    }, 1500);
 });
 
 document.addEventListener("DOMContentLoaded", () => {

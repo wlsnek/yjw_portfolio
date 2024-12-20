@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOUJINWOO PORTFOLIO</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+    <!-- 로딩 화면 -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="spinner"></div>
+        <p>로딩 중...</p>
+    </div>
+
+    <!-- 메인 컨텐츠 (로딩 후 표시될 영역) -->
+    <div class="main-content" id="mainContent" style="display: none;">
+        <header>
+            <div id="top_bar">YOU JINWOO PORTFOLIO</div>
+            <nav>
+                <div id="logo">
+                    <a href="#">Y</a>
+                </div>
+                <ul class="menu">
+                    <li><a href="#about">ABOUT ME</a></li>
+                    <li><a href="#skill">SKILL</a></li>
+                    <li><a href="#publishing">PUBLISHING</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div id="home">
+                <div class="text-animation fade-in">
+                    YOU JINWOO <br>
+                    PORTFOLIO
+                    <p>Scroll Down <br>
+                        &or;</p>
+                </div>
+            </div>
+            <div id="about">
+                <h1>ABOUT ME</h1>
+                <p>나를 소개합니다</p>
+                <div class="about_pic">
+                    <img src="img/about.png" alt="about">
+                </div>
+                <div class="about_text">
+                    <h1>Web Publisher</h1>
+                    <p>Name <span>유진우</span></p>
+                    <p>Birth <span>2000.05.27</span></p>
+                    <p>Address <span>경기도 고양시 일산서구 탄현동</span></p>
+                    <p>E-Mail <span>wlsdn7062@gmail.com</span></p>
+                    <p>Cell Phone <span>010-2126-8014</span></p>
+                    <br>
+                    <h1>Skill</h1>
+                    <div class="skill_box">
+                        <ul class="skill">
+                            <li><img src="img/photoshop.png" alt=""></li>
+                            <li><img src="img/illu.png" alt=""></li>
+                            <li><img src="img/html.png" alt=""></li>
+                            <li><img src="img/css.png" alt=""></li>
+                            <li><img src="img/javascript.png" alt=""></li>
+                            <li><img src="img/jQuery.png" alt=""></li>
+                            <li><img src="img/git.png" alt=""></li>
+                            <li><img src="img/react.png" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="skill">
+                <h1>SKILL</h1>
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">Photoshop / Illustrator</div>
+                        <div class="card-back">로고 디자인 및 <br> 배너 제작 가능</div>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">HTML / CSS</div>
+                        <div class="card-back">웹 사이트 설계, 디자인, <br> 코딩 가능</div>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">JavaScript / jQuery</div>
+                        <div class="card-back">여러가지 역동적인 동작들과 효과들을 사용할 수 있고 <br> 반응형 웹 구현 가능</div>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">Git</div>
+                        <div class="card-back">Git을 사용하여 협업 가능</div>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">Figma</div>
+                        <div class="card-back">협업 및 와이어프레임, <br> 프로토타입 제작 가능</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="publishing">
+                <h1>Publishing</h1>
+                <p>참여한 프로젝트를 소개합니다</p>
+                <div class="slider" id="slider">
+                    <div class="slides">
+                        <div class="slide active">
+                            <div class="slide_pic"><img src="img/monami.png" alt="slide1"></div>
+                            <div class="slide_text">
+                                <h2>Web Project 01</h2>
+                                <h1>MONAMI</h1>
+                                <h3>2명이서 진행한 프로젝트로 모나미 사이트를 클론코딩하여<br>
+                                    PHOTOSHOP, HTML, CSS, JavaScript로 제작하였습니다.</h3>
+                                <p>TYPE <span>고정형</span></p>
+                                <p>TOOL <span>PHOTOSHOP, HTML, CSS, JavaScript</span></p>
+                                <p>기여도 <span>메인페이지, 고객지원 페이지</span></p>
+                                <div class="site-button"><a href="monami/index.html" target="_blank">WEB SITE</a></div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="slide_pic"><img src="img/astroseoul.png" alt="slide2"></div>
+                            <div class="slide_text">
+                                <h2>Web Project 02</h2>
+                                <h1>서울시립천문대</h1>
+                                <h3>3명이서 진행한 프로젝트로 서울시립천문대 사이트를 리뉴얼하여<br>
+                                    PHOTOSHOP, HTML, CSS, JavaScript, jQuery로 제작하였습니다.</h3>
+                                <p>TYPE <span>반응형</span></p>
+                                <p>TOOL <span>PHOTOSHOP, HTML, CSS, JavaScript, jQuery</span></p>
+                                <p>기여도 <span>프로그램 목록, 소개, 예약페이지</span></p>
+                                <div class="site-button"><a href="https://1leeyujeong.github.io/project-astroseoul/" target="_blank">WEB
+                                        SITE</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="prevBtn" class="nav-btn prev">&lt;</button>
+                    <button id="nextBtn" class="nav-btn next">&gt;</button>
+                </div>
+                <!-- 이전 / 다음 버튼 -->
+            </div>
+            <div id="contact">
+                <h1>CONTACT ME</h1>
+                <p>언제든지 연락주세요</p>
+                <div class="contact-box">
+                    <img src="img/call.png" alt="call">
+                    <p>010-2126-8014</p>
+                    <img src="img/email.png" alt="email">
+                    <p>wlsdn7062@gmail.com</p>
+                </div>
+                <h2>Thank you</h2>
+                <h3>Contact anytime.</h3>
+                <p>Copyright ©2024 All rights reserved</p>
+            </div>
+            <button id="topBtn" class="top-btn">TOP</button>
+        </main>
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>

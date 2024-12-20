@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MONAMI</title>
+  <script src="https://kit.fontawesome.com/ec6c382d68.js" crossorigin="anonymous"></script>
+  <style>
+        * {margin: 0; padding: 0;}
+    #wrap {margin: 0 auto;}
+    a {text-decoration: none;
+       color: inherit;}
+    ul {list-style: none;}
+
+    /* 헤더 부분 */
+
+    header {width: 100%;
+            background-color: white;
+            position: fixed;
+            top: 0;
+            z-index: 100;}
+    #topbox {width: 70%;
+             margin: 0 auto;
+             display: flex;
+             justify-content: space-between;
+             color: #bbbbbb;}
+    .iconbox {font-size: 30px;}
+    .textbox1 {line-height: 45px;
+               font-size: 12px;}
+    .header_line {width: 100%;
+                  height: 1px;
+                  background-color: #7d7d7d;}
+    nav {width: 90%;
+         margin: 0 auto;
+         display: flex;
+         justify-content: space-evenly;}
+    .logo {width: 200px;
+           height: 50px;}
+    .menubox {width: 60%;}       
+    .menubox .mainmenu {margin-top: 20px;
+                        height: 70px;
+                        display: flex;
+                        }
+    .menubox .mainmenu>li {width: 150px;
+                           height: 70px;
+                           font-size: 16px;
+                          text-align: center;
+                          line-height: 50px;
+                          margin-right: 10px;}
+    .mainmenu li>a {display: block;}
+    .ul_box {width: 100%;
+             height: 430px;
+             position: fixed;
+             left: 0;
+             top: 130px;
+             z-index: -1;
+             background-color: rgba(255, 255, 255, 0.9);
+             display: none;}
+    .iconbox {width: 20%;}
+    .iconbox2 {font-size: 20px;
+               line-height: 85px;}
+    .submenu {width: 100%;
+              margin-top: 20px;
+              display: flex;
+              flex-direction: column;}
+    .submenu li {width: 100%;
+                 text-align: center;
+                 display: none;
+                 color: black;}
+    .submenu li>a {font-size: 14px;
+                   color: #4a4a4a;
+                   transition: 0.5s;
+                   border-bottom: 1px solid #dadada;}
+    .mainmenu>li:hover {color:crimson;
+                   border-bottom: 2px solid crimson;}
+    .submenu li>a:hover {color:crimson;}
+    .mainmenu:hover .submenu li {display: block;}
+    .mainmenu:hover .ul_box {display: block;}
+
+    /* 메인 부분 */
+      main {margin-top: 137px;}
+      main {height: 1800px;}
+      .cont_top {height: 150px;
+                 background-image: url(https://dfrkkcv2hg1jc.cloudfront.net/data/editor/2405/54ac7f9e1026bcec256828c0a66aea10_1715819249_012.jpg);
+                 background-repeat: no-repeat;
+                 background-position: 100% 100%;
+                 background-size: 100%;
+                 color: white;
+                 text-align: center;
+                 padding: 80px;}
+      .cont_top>p {font-size: 14px;}
+      #redbox {width: 30px;
+              height: 5px;
+              margin: 10px auto;
+             background-color:crimson}
+      .taps {width: 73%;
+             border: 1px solid #dadada;
+             border-top: none;
+             margin: 0 auto;
+             margin-top: -25px;
+             margin-bottom: 100px;
+             text-align: center;
+             font-size: 14px;
+             line-height: 55px;
+             display: flex;}
+      .taps a {display: block;}
+      .taps1 {width: 50%;
+              height: 55px;
+              background-color: white;
+              color: #4a4a4a;}
+      .taps2 {width: 50%;
+              height: 55px;
+              background-color: crimson;
+              color: white;}
+      #inq {font-size: 20px;
+            text-align: center;}
+      #inqRed {color: crimson;}
+      .cont_bg {width: 100%;
+                background-image: url(https://dfrkkcv2hg1jc.cloudfront.net/data/editor/2405/3e8e93d0c76fda1529d58c1d4b18f61b_1715819820_0931.jpg);
+                background-repeat: no-repeat;
+                background-size: 73.5% 100%;
+                background-position: 50% 50%;}
+      .cont_us {width: 62%;
+                background-color: rgba(0, 0, 0, 0.6);
+                height: 780px;
+                margin: 100px auto;
+                padding: 110px;}
+      .cont_us h1 {color: white;
+                   font-weight: lighter;
+                   font-size: 35px;}
+      .input_box {width: 100%;
+                  height: 100%;
+                  margin: 50px auto;
+                  display: flex;
+                  flex-wrap: wrap;}
+      .left_input {width: 50%;
+                   height: 80%;
+                   margin-right: 30px;}
+      .left_input select {width: 97%;
+                          height: 60px;
+                          margin-bottom: 15px;
+                          padding: 20px;
+                          font-size: 14px;
+                          background-color: #d7d7d7;
+                          color: #4a4a4a;
+                          border: none;}
+      .left_input input {width: 530px;
+                         height: 25px;
+                         margin-bottom: 15px;
+                         padding: 20px;
+                         font-size: 14px;
+                         background-color: #d7d7d7;
+                         color: #4a4a4a;
+                         border: none;}
+      #bigInput {height: 100px;}
+      .right_input {width: 45%;
+                    height: 80%;}
+      .input_text {width: 89%;
+                   height: 520px;
+                   padding: 30px;
+                   margin-bottom: 15px;
+                   line-height: 30px;
+                   overflow-y: scroll;
+                   background-color: #d7d7d7}
+       .input_text>h5 {font-size: 16px;}
+       .input_text>p {font-size: 13px;}
+       .check {color: white;
+               font-size: 14px;}
+        .send {width: 30%;
+               height: 60px;
+               margin: 0 auto;
+               background-color: rgba(255, 255, 255, 0.8);
+               color: crimson;
+               font-size: 25px;
+               text-align: center;
+               line-height: 55px;
+               transition: 0.3s;}
+         .send a {display: block;}
+         .send:hover {background-color: crimson;
+                      color: white;}
+    /* 풋터 부분 */
+
+    footer {height: 250px;
+            background-color: #131313;
+            padding: 60px 65px;}
+    #footerBox {width: 80%;
+                 height: 300px;
+                 margin: 0 auto;}
+    .foot_top {height: 50px;
+               display: flex;
+               justify-content: space-between;}
+    .foot_menu {width: 28%;
+                }
+    .foot_ul {width: 100%;
+              text-align: center;
+              margin-top: 7px;
+              font-size: 14px;
+              font-weight: bold;
+              color: #7d7d7d;
+              display: flex;}
+    .foot_ul li {width: 100%;}
+    .white_bar {width: 100%;
+                height: 1px;
+                margin: 15px auto;
+                background-color: #7d7d7d;}
+    .foot_bot {height: 200px;
+               display: flex;
+               justify-content:space-between}
+    .info {width: 40%;
+           line-height: 30px;}
+    .info, .cc>h4 {color: white;
+                   font-weight: lighter;}
+    .info>p {font-size: 14px;
+             color: #7d7d7d;}
+    .cc>h2 {color: #7d7d7d;}
+    .cc {width: 20%;
+         height: 100px;
+         margin-left: -250px;}
+    .cc_btn {width: 55%;
+             height: 35px;
+             margin-top: 10px;
+             border: 1px solid white;
+             border-radius: 5px;
+             background-color: #4a4a4a;
+             color: white;
+             text-align: center;
+             font-size: 14px;
+             line-height: 33px;}
+    .cc_btn>a {display: block;}
+    .foot_btn {width: 15%;
+               height: 100px;}
+    .foot_btn select {width: 100%;
+                      padding: 5px;
+                      font-size: 12px;
+                      background-color: #131313;
+                      color: #7d7d7d;
+                      border: 1px solid white;
+                      border-radius: 5px;}
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <header>
+      <div class="fix">
+      <div id="topbox">
+       <div class="iconbox">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram-square"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+       </div>
+       <div class="textbox1">
+        <a href="#">HOME</a> |
+        <a href="#">SITE MAP</a> |
+        <a href="#">CONTACT US</a>
+       </div>
+      </div>
+      <div class="header_line"></div>
+      <nav>
+        <div class="logo"><a href="index.html"><img src="https://www.monami.com/images/common/logo.jpg" alt="logo"></a></div>
+        <div class="menubox">
+          <ul class="mainmenu">
+            <div class="ul_box"></div>
+            <li>
+              <a href="#" class="main_a">모나미소개</a>
+                <ul class="submenu">
+                  <li><a href="#">CEO 메시지</a></li>
+                  <li><a href="#">회사정보</a></li>
+                  <li><a href="#">회사연혁</a></li>
+                  <li><a href="#">윤리강령</a></li>
+                  <li><a href="#">투자정보</a></li>
+                  <li><a href="#">CI</a></li>
+                  <li><a href="#">찾아오시는 길</a></li>
+                  <li><a href="#">안전보건 경영방침</a></li>
+                </ul>
+            </li>
+            <li>
+              <a href="#" class="main_a">모나미제품</a>
+                <ul class="submenu">
+                 <li><a href="#">프리미엄 펜</a></li>
+                 <li><a href="#">펜 펜슬</a></li>
+                 <li><a href="#">마카 컬러링</a></li>
+                 <li><a href="#">노트 사무용품</a></li>
+                 <li><a href="#">잉크 리필</a></li>
+                 <li><a href="#">카탈로그</a></li>
+                </ul>
+            </li>
+            <li>
+              <a href="#" class="main_a">NEWS & VIDEO</a>
+               <ul class="submenu">
+                 <li><a href="#">보도자료</a></li>
+                 <li><a href="#">동영상자료</a></li>
+               </ul>
+            </li>
+            <li>
+              <a href="#" class="main_a">모나미 미술대회</a>
+               <ul class="submenu">
+                 <li><a href="#">미술대회 소개</a></li>
+                 <li><a href="#">수상작 발표</a></li>
+               </ul>
+            </li>
+            <li>
+              <a href="#" class="main_a">고객지원</a>
+               <ul class="submenu">
+                <li><a href="#">자주묻는질문</a></li>
+                <li><a href="#">문의하기</a></li>
+               </ul>
+            </li>
+            <li>
+              <a href="#" class="main_a">기업 구매 / 개발</a>
+               <ul class="submenu">
+                <li><a href="#">대량 구매 문의</a></li>
+                <li><a href="#">기업 및 단체 구매</a></li>
+                <li><a href="#">산업 맞춤 제품개발</a></li>
+               </ul>
+            </li>
+          </ul>
+          
+        </div>
+        <div class="iconbox2">
+          <a href="#"><i class="fas fa-search"></i></a>
+          <a href="#"><i class="fas fa-align-justify"></i></a>
+        </div>
+      </nav>
+    </div>
+    </header>
+
+    <main>
+      <div id="contents">
+        <div class="cont_top">
+          <h1>고객지원</h1>
+          <div id="redbox"></div>
+          <p>모나미는 언제나 소중한 의견에 귀 기울이겠습니다.</p>
+        </div>
+        <div class="taps">
+          <div class="taps1"><a href="#">자주하는질문</a></div>
+          <div class="taps2"><a href="#">문의하기</a></div>
+        </div>
+        <span id="inq"><h1>MONAMI <span id="inqRed">INQUIRY</span></h1></span>
+        <div id="redbox"></div>
+        <div class="cont_bg">
+        <div class="cont_us">
+          <h1>CONTACT US</h1>
+          <div class="input_box">
+           <div class="left_input">
+            <select name="" id="">
+              <option value="">문의내용</option>
+              <option value="">제품문의</option>
+              <option value="">제안사항 (콜라보레이션 포함)</option>
+              <option value="">대량구매문의</option>
+              <option value="">산업용제품문의</option>
+              <option value="">기타문의</option>
+            </select>
+            <input type="text" name="" id="" placeholder="*이름">
+            <input type="email" name="" id="" placeholder="*이메일">
+            <input type="tel" name="" id="" placeholder="연락처">
+            <input type="text" name="" id="" placeholder="*제목">
+            <input type="text" name="" id="bigInput" placeholder="*내용">
+            <input type="file" name="" id="">
+           </div>
+           <div class="right_input">
+            <div class="input_text">
+              <h5>개인정보 취급 방침</h5>
+              <p>'㈜모나미'는 (이하 '회사'는) 정보주체의 개인정보를 중요시하며, "정보통신망 이용촉진 및 정보보호"에 관한 법률을 준수하고 있습니다. 회사는 개인정보취급방침을 통하여 고객님께서 제공하시는 개인정보가 어떠한 용도와 방식으로 이용되고 있으며, 개인정보보호를 위해 어떠한 조치가 취해지고 있는지 알려드립니다. 회사는 개인정보취급방침을 개정하는 경우 웹사이트 공지사항(또는 개별공지)을 통하여 공지할 것입니다.<br>
+                ＊ ㈜모나미의 개인정보 처리방침은 다음과 같은 내용을 담고 있습니다. <br>
+                
+                1. 수집하는 개인정보 항목 및 수집방법 <br>
+                회사는 제품 문의, 제안사항, 불만사항 접수 등을 위해 아래와 같은 개인정보를 수집하고 있습니다. <br>
+                - 필수항목 : 이름, 이메일<br>
+                - 선택항목 : 연락처<br>
+                (단, 정보주체의 기본적 인권 침해의 우려가 있는 민감한 인종 및 민족, 사상 및 신조, 출신지 및 본적지, 정치적 성향 및 범죄기록,건강상태 및 성생활 등의 개인정보는 수집하지 않습니다.) <br>
+                또한, 서비스 이용 과정에서 아래와 같은 정보들이 생성되어 수집될 수 있습니다.<br>
+                - 개인정보 추가 수집에 대해 별도 동의를 받는 경우 <br>
+                - 수집방법 : 홈페이지 ’문의하기(Contact Us)’ 서비스를 통한 수집<br>
+                
+                2. 개인정보 수집 및 이용목적<br>
+                회사는 수집한 개인정보를 다음의 목적을 위해 활용합니다.<br>
+                이용목적 : 질의자가 문의한 답변 전달, 본인의 의사표시 사항 처리, 불만사항 처리, 기타 원활한 의사소통 경로 확보 (이용 목적이 변경될 시에는 사전동의를 구할 예정입니다.)<br>
+                
+                3. 개인정보의 제공 및 공유<br>
+                회사는 정보주체들의 개인정보를 개인정보의 수집목적 및 이용목적에서 고지한 범위내에서 사용하며, 정보주체의 사전 동의 없이는 범위를 초과하여 이용하거나 원칙적으로 정보주체의 개인정보를 외부에 공개하지 않습니다. 다만, 아래의 경우에는 예외로 합니다. <br>
+                - 정보주체들이 사전에 동의한 경우<br>
+                - 법령의 규정에 의거하거나, 수사 목적으로 법령에 정해진 절차와 방법에 따라 수사기관의 요구가 있는 경우<br>
+                
+                4. 개인정보의 보유 및 이용기간<br>
+                정보주체 개인정보는 원칙적으로, 개인정보의 수집 및 이용목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다. 단, ‘회사’ 내부 방침 또는 정보주체로부터 개인정보 수집 시 동의 받은 개인정보 보유/이용기간, 관련법령의 규정 내에서 개인정보를 처리/보유합니다. 일정기간 동안 보존해야 하는 정보에 대해 아래와 같은 사유로 인하여 보존하고 있습니다.<br>
+                - 보존항목 : (필수) 이름, 이메일, 제목, 내용 / (선택) 연락처, 첨부파일 <br>
+                - 보유근거 : 정보주체 동의<br>
+                - 보유 및 이용기간 : 3년<br>
+                
+                5. 개인정보의 파기절차 및 방법<br>
+                회사는 원칙적으로 개인정보수집 및 이용목적이 달성된 후에는 해당정보를 지체없이 파기합니다. 파기절차 및 방법은 다음과 같습니다.<br>
+                - 파기절차 <br>
+                 : 정보주체가 서비스 신청, 문의상담 등을 위하여 입력하신 정보는 목적이 달성된 후 별도의 DB로 옮겨져(종이의 경우 별도의 서류함) 내부 방침 및 기타 관련 법령에 의한 정보보호 사유에 따라(보유 및 이용기간 참조) 일정기간 저장된 후 파기되어집니다.<br>
+                 : 동 개인정보는 법률에 의한 경우가 아니고서는 보유되어지는 이외의 다른 목적으로 이용되지 않습니다. <br>
+                - 파기방법 <br>
+                 : 전자적 파일형태로 저장된 개인정보는 기록을 재생할 수 없는 기술적 방법을 사용하여 삭제합니다.<br>
+                 : 종이에 출력된 개인정보는 분쇄기로 분쇄하거나 소각합니다. <br>
+                
+                6. 정보주체 및 법정대리인의 권리와 그 행사방법<br>
+                정보주체는 언제든지 등록되어 있는 자신의 개인정보를 조회하거나 수정할 수 있으며 삭제를 요청할 수 있습니다.<br>
+                혹은 개인정보보호책임자에게 서면, 전화 또는 이메일로 정정을 요청하시면, 본인 확인 절차 후에 조치하겠습니다. <br>
+                정보주체가 개인정보의 오류 등에 대한 정정 또는 삭제를 요구한 경우에는 회사는 정정 또는 삭제를 완료할 때까지 당해 개인정보를 이용하거나 제공하지 않습니다.<br>
+                권리 행사는 정보주체의 법정대리인이나 위임을 받은 자 등 대리인을 통하여 하실 수 있습니다. 이 경우 개인정보 보호법 시행규칙 별지 제11호 서식에 따른 위임장을 제출하셔야 합니다.<br>
+                
+                7. 개인정보 자동 수집장치의 설치,운영 및 그 거부에 관한 사항<br>
+                당사는 쿠키를 사용하지 않습니다. <br>
+                
+                8. 개인정보 보호책임자 및 담당부서 안내  <br>
+                회사는 고객의 개인정보를 보호하고 개인정보와 관련한 불만을 처리하기 위하여 아래와 같이 관련 부서 및 개인정보관리책임자를 지정하고 있습니다. <br>
+                - 개인정보담당부서 <br>
+                  : 부서명 : 마케팅팀<br>
+                  : 전화번호 : 080-022-0153 / 031-216-0153 <br>
+                  : 이메일 : help2@monami.com <br>
+                - 개인정보보호책임자<br>
+                  : 성명 : 신동호 팀장<br>
+                  : 전화번호 : 080-022-0153<br>
+                  : 이메일 : dhshin@monami.com <br>
+                
+                귀하께서는 회사의 서비스를 이용하시며 발생하는 모든 개인정보보호 관련 민원을 개인정보관리책임자 혹은 담당부서로 신고하실 수 있습니다. 회사는 정보주체들의 신고사항에 대해 신속하게 충분한 답변을 드릴 것입니다. 기타 개인정보침해에 대한 신고나 상담이 필요하신 경우에는 아래 기관에 문의하시기 바랍니다.<br> 
+                개인분쟁조정위원회 (http://www.1336.or.kr)<br>
+                정보보호마크인증위원회 (http://www.eprivacy.or.kr)<br>
+                대검찰청 인터넷범죄수사센터 (http://icic.sppo.go.kr)<br>
+                경찰청 사이버테러대응센터 (http://www.ctrc.go.kr) <br>
+                
+                9. 고지의 의무<br>
+                현 개인정보 처리방침 내용 추가, 삭제 및 수정이 있을 시에는 개정 최소 7일전부터 홈페이지의 ‘공지사항’을 통해 고지할 것입니다. <br>
+                개인정보취급방침 시행일자 : 2018년 08월 02일 </p>
+            </div>
+            <input type="checkbox" name="" id="yes"> <label for="yes" class="check">개인정보 수집 및 이용안내에 동의합니다.</label>
+           </div>
+           <div class="send"><a href="#">SEND</a></div>
+          </div>
+        </div>
+       </div>
+      </div>
+    </main>
+
+    <footer>
+      <div id="footerBox">
+        <div class="foot_top">
+          <div class="foot_logo"><img src="https://www.monami.com/images/common/foot_logo.jpg" alt=""></div>
+          <div class="foot_menu">
+            <ul class="foot_ul">
+              <li style="width: 70%;"><a href="#">회사 소개</a></li>
+              |
+              <li><a href="#" style="color: white;">개인정보처리방침</a></li>
+              |
+              <li><a href="#">이메일무단수집거부</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="white_bar"></div>
+        <div class="foot_bot">
+          <div class="info">
+            <h4>INFO</h4>
+            <p>ADDRESS : 경기도 용인시 수지구 손곡로 17 | TEL : 031-216-0153 | FAX : 031-270-5154</p><br>
+          </div>
+          <div class="cc">
+            <h4>CUSTOMER CENTER</h4>
+            <h2>080-022-0153</h2>
+            <div class="cc_btn"><a href="#">카카오톡 문의 ></a></div>
+          </div>
+          <div class="foot_btn">
+            <select name="" id="">
+              <option value="">FAMILY SITE</option>
+              <option value="">모나미코스메틱</option>
+              <option value="">모나미 기업서비스</option>
+              <option value="">모나미 미술대회</option>
+              <option value="">주식회사 항소</option>
+              <option value="">모나미 컨셉 스토어</option>
+              <option value="">모나르뗴</option>
+              <option value="">모나미몰</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
